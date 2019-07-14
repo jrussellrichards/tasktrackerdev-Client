@@ -3,9 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header.js'
 import Project from './Components/Project'
+import Projects from './Components/ProjectsList'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
+var projects=[
+  {"name":"Fifa19"},
+    {"name":"StarWars"},
+    {"name":"Pocoyo"}
+]
 function App() {
   return (
     <div className="App">
@@ -27,7 +33,7 @@ function App() {
             </Typography>
          </Grid>
        </Grid>
-       <Project name='Fifa19'/>
+       <Projects projects={projects}/>
 
     </div>
   );
