@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function InsetDividers(props) {
+export default function Project(props) {
   const classes = useStyles();
 
   return (
@@ -25,24 +25,11 @@ export default function InsetDividers(props) {
           <Avatar>
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Fifa 19" secondary="Jan 9, 2014" />
+        <ListItemText primary={props.name} secondary="Jan 9, 2014" />
       </ListItem>
       <Divider variant="inset" component="li" />
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Star Wars" secondary="Jan 7, 2014" />
-      </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Secret Game" secondary="July 20, 2014" />
-      </ListItem>
     </List>
+
+
   );
 }
