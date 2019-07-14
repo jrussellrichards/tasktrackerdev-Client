@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Components/Header.js'
 import Project from './Components/Project'
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 function App() {
   return (
@@ -11,13 +12,19 @@ function App() {
        <Header nombre='Joaquin'/> {/*Entregar como name la variable recibida desde server */}
        <Grid  container >
          <Grid item xs >
-           Proyectos
+            <Typography variant="P" component="h2">
+                Projects
+            </Typography>
          </Grid>
          <Grid item xs >
-           Tareas
+         <Typography variant="P" component="h2">
+                Tareas
+            </Typography>
          </Grid>
          <Grid item xs>
-           Configuración
+         <Typography variant="P" component="h2">
+                Configuración
+            </Typography>
          </Grid>
        </Grid>
        <Project name='Fifa19'/>
