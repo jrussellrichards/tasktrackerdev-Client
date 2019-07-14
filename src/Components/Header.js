@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props) {
   const classes = useStyles();
 
   return (
@@ -28,7 +28,7 @@ export default function ButtonAppBar() {
         <Toolbar>
 
           <Typography variant="h6" className={classes.title}>
-            Joaquin
+            {props.nombre}
           </Typography>
           <Button color="inherit">Cerrar sesión</Button>
         </Toolbar>

@@ -6,7 +6,7 @@ import Header from './Components/Header.js'
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+       <Header nombre='Joaquin'/> {/*Entregar como name la variable recibida desde server */}
     </div>
   );
 }
