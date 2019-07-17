@@ -23,7 +23,7 @@ export default class ProjectsList extends React.Component {
         
           <div>
              {this.projects.map(project =>(
-              <Project name={project.name}/>
+              <Project name={project.name} key={project.id.toString()}/>
 
             ))}
           </div>
