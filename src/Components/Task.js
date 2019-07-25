@@ -20,7 +20,7 @@ export default function Task(props) {
 
   return (
     <List className={classes.root}>
-      <ListItem>
+      <ListItem button>
 
         <ListItemText primary={props.name} secondary="Jan 9, 2014" />
         <div className={classes.root}>

@@ -1,14 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Project from './Project'
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: '100%',
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
+import {Project} from './Project'
 
 
 
@@ -23,7 +14,7 @@ export default class ProjectsList extends React.Component {
         
           <div>
              {this.projects.map(project =>(
-              <Project name={project.name} key={project.id.toString()}/>
+              <Project handleClick={this.props.handleClick} name={project.name} tasks={project.tasks} id={project.id.toString()}/>
 
             ))}
           </div>
