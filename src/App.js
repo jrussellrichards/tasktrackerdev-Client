@@ -14,7 +14,7 @@ var projects = [
     "id": 1,
     "name": "Fifa19",
     'tasks': [
-      { id: "1", name: 'diseñar', "progress": 10 },
+      { id: "1", name: 'hoña', "progress": 10 },
       { id: "2", name: 'trabajar', "progress": 20 },
       { id: "3", name: 'construir', "progress": 30 },
       { id: "4", name: 'pensar', "progress": 40 },
@@ -25,7 +25,7 @@ var projects = [
     "id": 2,
     "name": "StarWars",
     'tasks': [
-      { id: "51", name: 'diseñar', "progress": 10 },
+      { id: "51", name: 'soy', "progress": 10 },
       { id: "6", name: 'trabajar', "progress": 20 },
       { id: "7", name: 'construir', "progress": 30 },
       { id: "8", name: 'pensar', "progress": 40 },
@@ -36,7 +36,7 @@ var projects = [
     "id": 3,
     "name": "Pocoyo",
     'tasks': [
-      { id: "10", name: 'diseñar', "progress": 10 },
+      { id: "10", name: 'el', "progress": 10 },
       { id: "11", name: 'trabajar', "progress": 20 },
       { id: "12", name: 'construir', "progress": 30 },
       { id: "13", name: 'pensar', "progress": 40 },
@@ -47,7 +47,7 @@ var projects = [
     "id": 4,
     "name": "Doraemon",
     'tasks': [
-      { id: "15", name: 'diseñar', "progress": 10 },
+      { id: "15", name: 'elemento', "progress": 10 },
       { id: "16", name: 'trabajar', "progress": 20 },
       { id: "17", name: 'construir', "progress": 30 },
       { id: "18", name: 'pensar', "progress": 40 },
@@ -69,7 +69,6 @@ var projects = [
 
 class App extends React.Component {
   
-
   state = {
 
     'tasks': [
@@ -80,11 +79,12 @@ class App extends React.Component {
 
 
   handleClick = (id) => {
-  // this.setState({
-  //  'tasks':  projects.filter(project => project.id = id).tasks
-  // })
-    console.log(projects.filter(project => project.id = id))
-    console.log(id)
+
+
+    let filtrado=projects.filter(project => project.id == id)
+  this.setState({
+   'tasks': filtrado[0].tasks
+  })
 
 } 
 
