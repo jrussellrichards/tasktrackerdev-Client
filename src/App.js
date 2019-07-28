@@ -71,22 +71,29 @@ class App extends React.Component {
   
   state = {
 
-    'tasks': [
-      { id: "1", name: 'diseñar', "progress": 10 },
-
-    ]
+    'tasks': [  ],
+    'hours':  false
   }
 
 
   handleClick = (id) => {
 
 
-    let filtrado=projects.filter(project => project.id == id)
+  let filtrado=projects.filter(project => project.id == id)
   this.setState({
-   'tasks': filtrado[0].tasks
+   'tasks': filtrado[0].tasks,
+   'hours': false
   })
 
 } 
+
+displayHours= () => {
+  this.setState(
+    {
+      'hours':<Hours />
+    }
+  )
+}
 
   render() {
     return (
@@ -110,6 +117,7 @@ class App extends React.Component {
                   name={task.name}
                   key={task.id}
                   progress={task.progress}
+                  displayHours={this.displayHours}
                 />
               )
             }
@@ -119,8 +127,7 @@ class App extends React.Component {
             <Typography variant="h5" component="h5">
               Configuración
             </Typography>
-            <Hours />
-
+              {this.state.hours}
 
           </Grid>
         </Grid>

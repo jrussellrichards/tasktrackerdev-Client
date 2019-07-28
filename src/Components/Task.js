@@ -17,10 +17,13 @@ const useStyles = makeStyles(theme => ({
 
 export default function Task(props) {
   const classes = useStyles();
-
+  function handleClick(e) {
+    props.displayHours()
+  }
   return (
     <List className={classes.root}>
-      <ListItem button>
+      <ListItem button
+      onClick={handleClick}>
 
         <ListItemText primary={props.name} secondary="Jan 9, 2014" />
         <div className={classes.root}>
