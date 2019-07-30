@@ -17,19 +17,20 @@ const useStyles = makeStyles(theme => ({
 
 export default function Task(props) {
   const classes = useStyles();
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
 
   function handleClick(event,index) {
+    console.log(index,props.selectedTask)
+    props.selectTask(index);
     props.displayHours()
-    setSelectedIndex(index);
   }
 
  
   return (
     <List className={classes.root}>
       <ListItem button
-      selected={selectedIndex === 0}
-      onClick={event => handleClick(event, 0)}>
+      onClick={event => handleClick(event, props.id)}
+      selected={props.id === props.selectedTask}
+      >
         
 
         <ListItemText primary={props.name} secondary="Jan 9, 2014" />

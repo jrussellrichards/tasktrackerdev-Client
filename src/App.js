@@ -72,7 +72,8 @@ class App extends React.Component {
   state = {
 
     'tasks': [  ],
-    'hours':  false
+    'hours':  false,
+    'selectedTask': 0
   }
 
 
@@ -95,6 +96,13 @@ displayHours= () => {
   )
 }
 
+selectTask= (index) => {
+  this.setState(
+    {
+      'selectedTask':index
+    }
+  )
+}
   render() {
     return (
       <div className="App">
@@ -116,8 +124,11 @@ displayHours= () => {
                 <Task
                   name={task.name}
                   key={task.id}
+                  id={task.id}
                   progress={task.progress}
                   displayHours={this.displayHours}
+                  selectedTask={this.state.selectedTask}
+                  selectTask={this.selectTask}
                 />
               )
             }
