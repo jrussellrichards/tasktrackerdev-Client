@@ -14,16 +14,21 @@ export  class Project extends React.Component {
    id=this.props.id
    
 
-   onClickListItem = () => {
+   onClickListItem = (e,index) => {
     this.props.handleClick(this.props.id)
-  
+    this.props.selectProject(index)
+    
    }
    
    render(){
 
     return (
       <List >
-        <ListItem button onClick={this.onClickListItem}>
+        <ListItem button 
+         onClick={event => this.onClickListItem(event, this.props.id)}
+        selected={this.props.id === this.props.selectedProject}
+        
+        >
           <ListItemAvatar>
             <Avatar>
             </Avatar>

@@ -19,7 +19,6 @@ export default function Task(props) {
   const classes = useStyles();
 
   function handleClick(event,index) {
-    console.log(index,props.selectedTask)
     props.selectTask(index);
     props.displayHours()
   }

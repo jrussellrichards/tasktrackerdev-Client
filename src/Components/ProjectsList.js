@@ -14,7 +14,13 @@ export default class ProjectsList extends React.Component {
         
           <div>
              {this.projects.map(project =>(
-              <Project handleClick={this.props.handleClick} name={project.name} tasks={project.tasks} id={project.id.toString()}/>
+              <Project 
+              handleClick={this.props.handleClick} 
+              name={project.name} tasks={project.tasks} 
+              id={project.id.toString()}
+              selectedProject={this.props.selectedProject}
+              selectProject={this.props.selectProject}
+              />
 
             ))}
           </div>

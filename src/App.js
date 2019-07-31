@@ -73,7 +73,8 @@ class App extends React.Component {
 
     'tasks': [  ],
     'hours':  false,
-    'selectedTask': 0
+    'selectedTask': 0,
+    'selectedProject': 0
   }
 
 
@@ -97,9 +98,17 @@ displayHours= () => {
 }
 
 selectTask= (index) => {
-  this.setState(
+this.setState(
     {
       'selectedTask':index
+    }
+  )
+}
+
+selectProject= (index) => {
+this.setState(
+    {
+      'selectedProject':index
     }
   )
 }
@@ -112,7 +121,13 @@ selectTask= (index) => {
             <Typography variant="h5" component="h5">
               Projects
               </Typography>
-            <Projects projects={projects} handleClick={this.handleClick}/>
+            <Projects 
+            projects={projects} 
+            handleClick={this.handleClick}
+            selectedProject={this.state.selectedProject}
+            selectProject={this.selectProject}
+
+            />
           </Grid>
           <Grid item xs >
             <Typography variant="h5" component="h5">
