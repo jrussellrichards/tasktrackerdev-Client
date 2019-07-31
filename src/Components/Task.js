@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 export default function Task(props) {
   const classes = useStyles();
 
-  function handleClick(event,index) {
+  function handleClick(index) {
     props.selectTask(index);
     props.displayHours()
   }
@@ -27,7 +27,7 @@ export default function Task(props) {
   return (
     <List className={classes.root}>
       <ListItem button
-      onClick={event => handleClick(event, props.id)}
+      onClick={() => handleClick( props.id)}
       selected={props.id === props.selectedTask}
       >
         

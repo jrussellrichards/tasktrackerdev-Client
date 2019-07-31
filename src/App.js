@@ -6,6 +6,7 @@ import Task from './Components/Task'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hours from './Components/Hours'
+import Dialog from './Components/Dialog'
 
 
 var projects = [
@@ -74,7 +75,8 @@ class App extends React.Component {
     'tasks': [  ],
     'hours':  false,
     'selectedTask': 0,
-    'selectedProject': 0
+    'selectedProject': 0,
+    'Modal': false
   }
 
 
@@ -92,7 +94,8 @@ class App extends React.Component {
 displayHours= () => {
   this.setState(
     {
-      'hours':<Hours />
+      'hours':<Hours
+      displayModal={this.displayModal} />
     }
   )
 }
@@ -112,6 +115,16 @@ this.setState(
     }
   )
 }
+
+displayModal= () => {
+this.setState(
+    {
+      'Modal':true
+    }
+  )
+}
+
+
   render() {
     return (
       <div className="App">
@@ -144,6 +157,7 @@ this.setState(
                   displayHours={this.displayHours}
                   selectedTask={this.state.selectedTask}
                   selectTask={this.selectTask}
+                  displayModal={this.displayModal}
                 />
               )
             }
@@ -156,7 +170,9 @@ this.setState(
               {this.state.hours}
 
           </Grid>
+          
         </Grid>
+        <Dialog modalState={this.state.Modal}/>
 
 
       </div>
