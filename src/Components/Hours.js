@@ -22,10 +22,12 @@ export default class extends React.Component {
               <ListItem
               button
              onClick={() => this.props.displayModal()}
+             
 
           // selected={selectedIndex === 2}
           // onClick={event => handleListItemClick(event, 2)}
           >
+
               <ListItemText primary={element} />
           </ListItem>
 

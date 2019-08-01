@@ -124,6 +124,14 @@ this.setState(
   )
 }
 
+closeModal= () => {
+this.setState(
+    {
+      'Modal':false
+    }
+  )
+}
+
 
   render() {
     return (
@@ -172,7 +180,10 @@ this.setState(
           </Grid>
           
         </Grid>
-        <Dialog modalState={this.state.Modal}/>
+        <Dialog 
+        modalState={this.state.Modal}
+        closeModal={this.closeModal}
+        />
 
 
       </div>
