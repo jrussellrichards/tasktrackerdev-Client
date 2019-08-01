@@ -21,19 +21,18 @@ export default class AlertDialog extends React.Component {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"Está seguro de lo que está haciendo?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous location data to
-            Google, even when no apps are running.
+            El asignar correctamente tus horas nos ayudará a que puedas tener una experiencia mejor.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={this.props.closeModal} color="primary">
-            Disagree
+            No
           </Button>
           <Button onClick={this.props.closeModal} color="primary" autoFocus>
-            Agree
+            Si
           </Button>
         </DialogActions>
       </Dialog>
