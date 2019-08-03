@@ -7,12 +7,19 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hours from './Components/Hours'
 import Dialog from './Components/Dialog'
+const fifa19 = require('./img/fifa19.png')
+const lineage = require('./img/lineage.png')
+const starWars = require('./img/starWars.png')
+const Pocoyo = require('./img/pocoyo.jpg')
+const Doraemon = require('./img/cosmico.png')
+
 
 
 var projects = [
   {
     "id": 1,
     "name": "Fifa19",
+    "img": fifa19,
     'tasks': [
       { id: "1", name: 'hola', "progress": 100 },
       { id: "2", name: 'esta', "progress": 40 },
@@ -23,6 +30,7 @@ var projects = [
   },
   {
     "id": 2,
+    "img": starWars,
     "name": "StarWars",
     'tasks': [
       { id: "51", name: 'soy', "progress": 10 },
@@ -34,6 +42,7 @@ var projects = [
   },
   {
     "id": 3,
+    "img": Pocoyo,
     "name": "Pocoyo",
     'tasks': [
       { id: "10", name: 'el', "progress": 25 },
@@ -45,6 +54,7 @@ var projects = [
   },
   {
     "id": 4,
+    "img": Doraemon,
     "name": "Doraemon",
     'tasks': [
       { id: "15", name: 'mucha', "progress": 12 },
@@ -56,6 +66,7 @@ var projects = [
   },
   {
     "id": 5,
+    "img": lineage,
     "name": "Lineage 3",
     'tasks': [
       { id: "20", name: 'las', "progress": 100 },

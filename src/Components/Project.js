@@ -6,6 +6,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
 
+
 export  class Project extends React.Component {
   
     
@@ -16,20 +17,19 @@ export  class Project extends React.Component {
    onClickListItem = (index) => {
     this.props.handleClick(this.props.id)
     this.props.selectProject(index)
-    
    }
    
    render(){
 
     return (
+      
       <List >
         <ListItem button 
          onClick={() => this.onClickListItem( this.props.id)}
-         selected={this.props.id === this.props.selectedProject}
-        
+         selected={this.props.id === this.props.selectedProject}        
         >
           <ListItemAvatar>
-            <Avatar>
+            <Avatar src={this.props.img}>
             </Avatar>
           </ListItemAvatar>
           <ListItemText primary={this.props.name} secondary="Jan 9, 2014" />

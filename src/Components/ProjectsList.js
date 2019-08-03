@@ -20,6 +20,7 @@ export default class ProjectsList extends React.Component {
               id={project.id.toString()}
               selectedProject={this.props.selectedProject}
               selectProject={this.props.selectProject}
+              img={project.img}
               />
 
             ))}
