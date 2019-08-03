@@ -16,15 +16,15 @@ export default class AlertDialog extends React.Component {
         Open alert dialog
       </Button> */}
       <Dialog
-        open={this.props.modalState}
+        open={this.props.modalState[0]}
         onClose={this.handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Está seguro de lo que está haciendo?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">¿Estás seguro de haber trabajado {this.props.modalState[1]} horas?</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            El asignar correctamente tus horas nos ayudará a que puedas tener una experiencia mejor.
+            Asignando tus horas correctamente nos ayudarás a brindate una experiencia mejor.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

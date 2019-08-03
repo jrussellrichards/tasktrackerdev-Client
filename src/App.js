@@ -87,7 +87,7 @@ class App extends React.Component {
     'hours':  false,
     'selectedTask': 0,
     'selectedProject': 0,
-    'Modal': false
+    'Modal': [false,0]
   }
 
 
@@ -127,10 +127,10 @@ this.setState(
   )
 }
 
-displayModal= () => {
+displayModal= (hour) => {
 this.setState(
     {
-      'Modal':true
+      'Modal':[true,hour]
     }
   )
 }
@@ -176,7 +176,6 @@ this.setState(
                   displayHours={this.displayHours}
                   selectedTask={this.state.selectedTask}
                   selectTask={this.selectTask}
-                  displayModal={this.displayModal}
                 />
               )
             }

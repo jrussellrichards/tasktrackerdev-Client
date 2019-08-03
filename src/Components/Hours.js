@@ -21,7 +21,7 @@ export default class extends React.Component {
                  {this.lista.map(element =>(
               <ListItem
               button
-             onClick={() => this.props.displayModal()}
+             onClick={() => this.props.displayModal(element)}
              
 
           // selected={selectedIndex === 2}
